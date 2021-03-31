@@ -1,0 +1,35 @@
+{% extends "todo/base.html" %}
+{% load pluralize_pl %}
+{% load static %}
+
+{% block content %}
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+            {% if todos %}
+                 <h1>{{ todos.count }} {{ todos.count|pluralize_pl:"Aktualne zadanie, Aktualych zadań"}}</h1>
+            {% else %}
+                           <h1>Aktualne zadanie</h1>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+        {% if todos %}
+            <div class="list-group">
+                {% for todo in todos %}
+                    <div class="data"> Utworzone {{ todo.created|date:"M d, Y" }} </div>
+                    <a href="{% url 'viewtodo' todo.id %}" class="a {% if todo.important %} text-danger  {% endif %}">{% if todo.important %} <img class="info" src="{{STATIC_URL}}/todo/static/todo/flame.png"/>{% endif %}<b> {{ todo.title }}</b>{% if todo.memo %} - {{ todo.memo|truncatechars:30 }}{% endif %}</a>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="text-center">
+                <h2>Brak zadań do wykonania</h2>
+            <br>
+            <a role="button" class="btn btn-primary" href="{% url 'createtodo' %}">Nowe zadanie</a>
+            </div>
+        {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

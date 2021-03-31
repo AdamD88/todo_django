@@ -1,0 +1,34 @@
+{
+    "dev": {
+        "django_settings": "todoapp.settings",
+        "profile_name": "default",
+        "project_name": "django-inz",
+        "runtime": "python3.7",
+        "s3_bucket": "serverlesstodoinz",
+        "aws_region": "eu-west-1",
+        "role_name": "zappa_permissions",
+        "cors": true,
+        "asgi": true,
+        "method_header_types": [
+          "accept",
+          "accept-encoding",
+          "content-type",
+          "dnt",
+          "origin",
+          "user-agent",
+          "x-csrftoken",
+          "x-requested-with",
+          "Location",
+          "Status",
+          "X-Frame-Options",
+          "Set-Cookie",
+          "Authorization",
+          "Access-Control-Allow-Origin",
+          "Access-Control-Allow-Headers",
+          "Access-Control-Allow-Methods"
+        ],
+        "keep_warm": true,
+        "enable_cors": true,
+        "binary_support": false
+    }
+}

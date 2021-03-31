@@ -1,0 +1,77 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:*",
+        "cognito-identity:ListIdentityPools",
+        "cognito-sync:GetCognitoEvents",
+        "cognito-sync:SetCognitoEvents",
+        "dynamodb:*",
+        "events:*",
+        "iam:ListAttachedRolePolicies",
+        "iam:ListRolePolicies",
+        "iam:ListRoles",
+        "iam:PassRole",
+        "kinesis:DescribeStream",
+        "kinesis:ListStreams",
+        "kinesis:PutRecord",
+        "lambda:*",
+        "logs:*",
+        "sns:ListSubscriptions",
+        "sns:ListSubscriptionsByTopic",
+        "sns:ListTopics",
+        "sns:Subscribe",
+        "sns:Unsubscribe"
+      ],
+      "Resource": "*"
+    },
+      {
+        "Effect": "Allow",
+        "Action": "*",
+        "Resource": "arn:aws:s3:::serverlesstodoinz/*"
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+            "apigateway:DELETE",
+            "apigateway:GET",
+            "apigateway:PATCH",
+            "apigateway:POST",
+            "apigateway:PUT",
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStackResource",
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStackResources",
+            "cloudformation:UpdateStack",
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:ListRules",
+            "events:ListRuleNamesByTarget",
+            "events:ListTargetsByRule",
+            "events:PutRule",
+            "events:PutTargets",
+             "events:RemoveTargets",
+            "lambda:*",
+            "lambda:AddPermission",
+            "lambda:CreateFunction",
+            "lambda:DeleteFunction",
+            "lambda:GetFunction",
+            "lambda:GetFunctionConfiguration",
+            "lambda:ListVersionsByFunction",
+            "lambda:UpdateFunctionCode",
+            "logs:DescribeLogStreams",
+            "logs:FilterLogEvents",
+            "route53:ListHostedZones",
+            "route53:ChangeResourceRecordSets",
+            "route53:GetHostedZone"
+        ],
+        "Resource": [
+            "*"
+        ]
+      }
+
+    ]
+}
