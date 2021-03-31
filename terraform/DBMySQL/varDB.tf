@@ -1,0 +1,11 @@
+variable "aws_access_key" { default = "xxxxxxxxxx"}
+variable "aws_secret_key" {default = "xxxxxxxxxxxx"}
+variable "aws_region" {default = "eu-west-1"}
+variable "storage_typ" {default = "gp2"}
+variable "engine" {default = "mysql"}
+variable "engine_ver" {default = "5.7"}
+variable "instance" {default = "db.t2.micro"}
+variable "user" {default = "user"}
+variable "pass" {default = "password"}
+variable "parameter" {default = "default.mysql5.7"}
+variable "name" {default = "DBinz"}
